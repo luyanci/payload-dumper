@@ -28,7 +28,7 @@ jobs:
           if: ${{matrix.builder == 'pyinstaller'}}
           run: |
             pip install pyinstaller
-            cd src
+            cd src/payload_dumper
             pyinstaller -F __main__.py
         - name: Build with nuitka
           if: ${{matrix.builder == 'nuitka'}}
